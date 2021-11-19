@@ -26,9 +26,9 @@ const faceCards = [
   ["eight", 8],
   ["nine", 9],
   ["ten", 10],
-  ["joker", 11],
-  ["queen", 12],
-  ["king", 13]    
+  ["joker", 10],
+  ["queen", 10],
+  ["king", 10]    
 ];
 
 var cards = [];
@@ -48,12 +48,22 @@ let player = [];
 let dealerCount = 0;
 let playerCount = 0;
 let index = 0;
+let bet = 0;
 
 dealer.push(cards[index]);
 player.push(cards[index + 1]);
-dealerCount = dealerCount + cards[index].face[1];
-playerCount = playerCount + cards[index + 1].face[1];
-index = index + 2;
+dealer.push(cards[index + 2]);
+player.push(cards[index + 3]);
+
+dealerCount = dealerCount + cards[index].face[1] + cards[index + 2].face[1];
+playerCount = playerCount + cards[index + 1].face[1] + cards[index + 3].face[1];
+
+index = index + 4;
+
+
+console.log("Place Bet: \n");
+// user input will be defined based on end product framework such as Node.js, or html javascript
+bet = 1000;
 
 while(game) {
     
