@@ -32,6 +32,8 @@ const faceCards = [
 ];
 
 var cards = [];
+var dealer = [];
+var player = [];
 
 for(var i = 0; i < suits.length; i++) {
   for(var j = 0; j < faceCards.length; j++) {
@@ -41,5 +43,9 @@ for(var i = 0; i < suits.length; i++) {
 shuffle(cards);
 
 console.log(cards);
+
+
+
+
 
 
