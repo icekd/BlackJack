@@ -8,6 +8,8 @@ function shuffle(arr) {
   } 
 }
 
+
+
 const suits = [
   "diamonds",
   "clubs",
