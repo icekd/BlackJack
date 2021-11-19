@@ -1,8 +1,8 @@
 // Fisher–Yates shuffle
 function shuffle(arr) {
-  for(var i = arr.length - 1; i >= 0; i--) {
-    var k = Math.floor((Math.random() * (i + 1)));
-    var temp = arr[i];
+  for(let i = arr.length - 1; i >= 0; i--) {
+    let k = Math.floor((Math.random() * (i + 1)));
+    let temp = arr[i];
     arr[i] = arr[k];
     arr[k] = temp;
   } 
@@ -32,17 +32,32 @@ const faceCards = [
 ];
 
 var cards = [];
-var dealer = [];
-var player = [];
 
-for(var i = 0; i < suits.length; i++) {
-  for(var j = 0; j < faceCards.length; j++) {
+for(let i = 0; i < suits.length; i++) {
+  for(let j = 0; j < faceCards.length; j++) {
     cards.push({ face: faceCards[j], suit: suits[i] });
   }
 }
-shuffle(cards);
 
-console.log(cards);
+shuffle(cards);
+//console.log(cards);
+
+let game = true;
+let dealer = [];
+let player = [];
+let dealerCount = 0;
+let playerCount = 0;
+let index = 0;
+
+dealer.push(cards[index]);
+player.push(cards[index + 1]);
+dealerCount = dealerCount + cards[index].face[1];
+playerCount = playerCount + cards[index + 1].face[1];
+index = index + 2;
+
+while(game) {
+    
+}
 
 
 
