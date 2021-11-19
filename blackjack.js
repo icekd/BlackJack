@@ -7,8 +7,6 @@ function shuffle(arr) {
     arr[i] = arr[k];
     arr[k] = temp;
   } 
-  for(var i = 0; i < arr.length; i++) {
-  }
 }
 
 const suits = [
