@@ -95,11 +95,11 @@ while(true) {
             dealer = [];
             player = [];
             shuffle(cards);
-            let setup = setHand(cards);
-            let dealerCount = setup.dealerCount;
-            let playerCount = setup.playercount;
-            let index = setup.index;
-            let bet = setup.bet;
+            setup = setHand(cards);
+            dealerCount = setup.dealerCount;
+            playerCount = setup.playercount;
+            index = setup.index;
+            bet = setup.bet;
           }
         } else {
             if(playerCount > dealerCount) {
@@ -116,11 +116,11 @@ while(true) {
             dealer = [];
             player = [];
             shuffle(cards);
-            let setup = setHand(cards);
-            let dealerCount = setup.dealerCount;
-            let playerCount = setup.playercount;
-            let index = setup.index;
-            let bet = setup.bet;
+            setup = setHand(cards);
+            dealerCount = setup.dealerCount;
+            playerCount = setup.playercount;
+            index = setup.index;
+            bet = setup.bet;
         }
     }
 }
