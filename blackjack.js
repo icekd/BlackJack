@@ -104,6 +104,11 @@ while(game) {
         dealer = [];
         player = [];
         shuffle(cards);
+        let setup = setHand(cards);
+        let dealerCount = setup.dealerCount;
+        let playerCount = setup.playercount;
+        let index = setup.index;
+        let bet = setup.bet;
     }
 }
 
