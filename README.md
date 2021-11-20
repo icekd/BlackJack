@@ -1,2 +1,2 @@
 # BlackJack
-JavaScript Script for BlackJack
+JavaScript for BlackJack, still a WIP
