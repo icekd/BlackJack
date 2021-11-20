@@ -8,11 +8,12 @@ function shuffle(arr) {
   } 
 }
 
-function hitEvent() {
+function hitEvent() {		
       var img = document.createElement("img");
-      img.src = "blackjack/cards/" + "twohearts" + ".png"; 
+      img.src = "cards/" + cards[index].face[0] + cards[index].suit + ".png"; 
       img.height = 100; 
       img.width = 100;
+	  index = index + 1;
       document.body.appendChild(img);
 }
 
@@ -22,7 +23,7 @@ function standEvent() {
 
 function setHand(cards) {
     let index = 0;
-    let dealercount = 0;
+    let dealerCount = 0;
     let playerCount = 0;
     let bet = 0;
     dealer.push(cards[index]);
@@ -90,7 +91,7 @@ let bet = setup.bet;
 
 console.log("Place Bet: \n");
 // user input will be defined based on end product framework such as Node.js, or html javascript
-let bet = 1000;
+bet = 1000;
 var coins = 10000;
 let userOption = 0;
 /*
