@@ -9,7 +9,11 @@ function shuffle(arr) {
 }
 
 function hitEvent() {
-
+      var img = document.createElement("img");
+      img.src = "blackjack/cards/" + "twohearts" + ".png"; 
+      img.height = 100; 
+      img.width = 100;
+      document.body.appendChild(img);
 }
 
 function standEvent() {
@@ -78,7 +82,7 @@ let player = [];
 let setup = setHand(cards);
 let dealerCount = setup.dealerCount;
 let playerCount = setup.playercount;
-let index = setup.index;
+var index = setup.index;
 let bet = setup.bet;
 
 
@@ -89,7 +93,7 @@ console.log("Place Bet: \n");
 let bet = 1000;
 var coins = 10000;
 let userOption = 0;
-
+/*
 while(true) {
     console.log("1. Hit 2. Stand: \n");
     while(game) {
@@ -132,7 +136,7 @@ while(true) {
         }
     }
 }
-
+*/
 
 
 
