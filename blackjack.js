@@ -8,6 +8,27 @@ function shuffle(arr) {
   } 
 }
 
+function setHand(cards) {
+    let index = 0;
+    let dealercount = 0;
+    let playerCount = 0;
+    let bet = 0;
+    dealer.push(cards[index]);
+    player.push(cards[index + 1]);
+    dealer.push(cards[index + 2]);
+    player.push(cards[index + 3]);
+    index = index + 4;
+    dealerCount = dealerCount + cards[index].face[1] + cards[index + 2].face[1];
+    playerCount = playerCount + cards[index + 1].face[1] + cards[index + 3].face[1];
+   return {
+        dealerCount,
+        playerCount,
+        index,
+        bet
+    };
+}
+
+
 const suits = [
   "diamonds",
   "clubs",
@@ -45,28 +66,12 @@ shuffle(cards);
 let game = true;
 let dealer = [];
 let player = [];
-let dealerCount = 0;
-let playerCount = 0;
-let index = 0;
-let bet = 0;
-function setHand(cards,dealerCount,playerCount,index) {
-    index = 0;
-    dealercount = 0;
-    playerCount = 0;
-    dealer.push(cards[index]);
-    player.push(cards[index + 1]);
-    dealer.push(cards[index + 2]);
-    player.push(cards[index + 3]);
-    index = index + 4;
-    dealerCount = dealerCount + cards[index].face[1] + cards[index + 2].face[1];
-    playerCount = playerCount + cards[index + 1].face[1] + cards[index + 3].face[1];
-   return {
-        dealerCount,
-        playerCount,
-        index
-    };
-}
 
+let setup = setHand(cards);
+let dealerCount = setup.dealerCount;
+let playerCount = setup.playercount;
+let index = setup.index;
+let bet = setup.bet;
 
 
 
@@ -98,7 +103,6 @@ while(game) {
         game = false;
         dealer = [];
         player = [];
-        bet = 0;
         shuffle(cards);
     }
 }
