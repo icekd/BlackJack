@@ -37,7 +37,7 @@ const suits = [
 ];
 
 const faceCards = [
-  ["one", 1],
+  ["ace", 11],
   ["two", 2],
   ["three", 3],
   ["four", 4],
