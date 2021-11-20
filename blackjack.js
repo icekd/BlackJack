@@ -89,8 +89,19 @@ while(true) {
           player.push(cards[index]);
           playerCount = playerCount + cards[index].face[1];
           index = index + 1;
-        } else {
+          if(playerCount > 21) {
+            console.log("You got a bust with a score over 21");
             game = false;
+            dealer = [];
+            player = [];
+            shuffle(cards);
+            let setup = setHand(cards);
+            let dealerCount = setup.dealerCount;
+            let playerCount = setup.playercount;
+            let index = setup.index;
+            let bet = setup.bet;
+          }
+        } else {
             if(playerCount > dealerCount) {
                coins = coins + 2 * bet;
                console.log("You won with a score of " + playerCount);
