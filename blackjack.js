@@ -8,6 +8,14 @@ function shuffle(arr) {
   } 
 }
 
+function hitEvent() {
+
+}
+
+function standEvent() {
+
+}
+
 function setHand(cards) {
     let index = 0;
     let dealercount = 0;
@@ -63,7 +71,7 @@ for(let i = 0; i < suits.length; i++) {
 shuffle(cards);
 //console.log(cards);
 
-let game = true;
+var game = true;
 let dealer = [];
 let player = [];
 
