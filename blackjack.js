@@ -96,8 +96,6 @@ while(game) {
            console.log("You lost with a score of " + playerCount);
         }
         game = false;
-        playerCount = 0;
-        dealerCount = 0;
         dealer = [];
         player = [];
         bet = 0;
