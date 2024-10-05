@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #game-board {
+            margin-top: 20px;
+        }
+
+        #dealer-hand, #player-hand {
+            margin: 20px;
+        }
+
+        #dealer-hand img, #player-hand img {
+            margin: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
-<script src= "blackjack.js"></script>
-<h1>BlackJack</h1>
+    <h1>BlackJack</h1>
 
-<button onclick="hitEvent()" id = 'hit' style="display: none;" >Hit</button>
-<button onclick="standEvent()" id = 'stand' style="display: none;">Stand</button>
-<button onclick="startGame()" id = 'start'>Start</button>
+    <!-- Display for Game Information -->
+    <div id="game-info">
+        <p id="dealer-count">Dealer Count: 0</p>
+        <p id="player-count">Player Count: 0</p>
+    </div>
 
+    <!-- Game Board for Cards -->
+    <div id="game-board">
+        <h2>Dealer's Hand</h2>
+        <div id="dealer-hand"></div>
+
+        <h2>Your Hand</h2>
+        <div id="player-hand"></div>
+    </div>
+
+    <!-- Game Controls -->
+    <div id="game-controls">
+        <button onclick="hitEvent()" id="hit" class="hidden">Hit</button>
+        <button onclick="standEvent()" id="stand" class="hidden">Stand</button>
+        <button onclick="startGame()" id="start">Start</button>
+    </div>
+
+    <script src="blackjack.js"></script>
 </body>
 </html>
